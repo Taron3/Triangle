@@ -16,4 +16,4 @@ public:
 };
 
 
-#endif // ! MYEXCEPTION_HPP
+#endif // MYEXCEPTION_HPP

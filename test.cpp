@@ -15,7 +15,7 @@ int main()
     try
     {
         Triangle t(p1,p2,p3);
-//        t.rotate(45);
+        t.rotate(45);
 
         std::cout << "p1 = " << t.get_p1().X() << " " << t.get_p1().Y() << "\n" ;
         std::cout << "p2 = " << t.get_p2().X() << " " << t.get_p2().Y() << "\n" ;

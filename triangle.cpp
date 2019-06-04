@@ -2,20 +2,19 @@
 
 #include "triangle.hpp"
 
-
-void Triangle::set_a(const Point &p1, const Point &p3)  //side_a
+void Triangle::set_a(const Point &p1, const Point &p3)  
 {
 	m_p1 = p1;
 	m_p3 = p3;
 }
 
-void Triangle::set_b(const Point &p1, const Point &p2)  //side_b
+void Triangle::set_b(const Point &p1, const Point &p2) 
 {
 	m_p1 = p1;
 	m_p2 = p2;
 }
 
-void Triangle::set_c(const Point &p2, const Point &p3)  //side_c
+void Triangle::set_c(const Point &p2, const Point &p3)  
 {
 	m_p1 = p2;
 	m_p3 = p3;
@@ -60,8 +59,7 @@ double Triangle::height_b() const { return area() / ( (1.0 / 2) * get_b() ); }
 double Triangle::height_c() const { return area() / ( (1.0 / 2) * get_c() ); }
 
 
-void Triangle::move_Bottom_Left(const Point &pos) //Moves the Triangle, leaving the bottom-left corner at the given position. 
-                                                  //The Triangle's size is unchanged 
+void Triangle::move_Bottom_Left(const Point &pos) 
 {
 	m_p2.set_x(m_p2.X() + (pos.X() - m_p1.X()) );            
 	m_p3.set_x(m_p3.X() + (pos.X() - m_p1.X()) );
@@ -72,8 +70,7 @@ void Triangle::move_Bottom_Left(const Point &pos) //Moves the Triangle, leaving 
 	m_p1.set_y(pos.Y());            
 }
 
-void Triangle::move_Bottom_Right(const Point &pos) //Moves the Triangle, leaving the bottom-right corner at the given position. 
-                                                   //The Triangle's size is unchanged  
+void Triangle::move_Bottom_Right(const Point &pos) 
 {
 	m_p1.set_x(m_p1.X() + (pos.X() - m_p2.X()) );            
 	m_p3.set_x(m_p3.X() + (pos.X() - m_p2.X()) );
@@ -84,8 +81,7 @@ void Triangle::move_Bottom_Right(const Point &pos) //Moves the Triangle, leaving
 	m_p2.set_y(pos.Y());                     
 }
 
-void Triangle::move_Top(const Point &pos)          //Moves the Triangle, leaving the top corner at the given position. 
-                                                   //The Triangle's size is unchanged  
+void Triangle::move_Top(const Point &pos)       
 {           
 	m_p1.set_x(m_p1.X() + (pos.X() - m_p3.X()) );            
 	m_p2.set_x(m_p2.X() + (pos.X() - m_p3.X()) );
@@ -95,14 +91,14 @@ void Triangle::move_Top(const Point &pos)          //Moves the Triangle, leaving
 	m_p2.set_y(m_p2.Y() + (pos.Y() - m_p3.Y()) );
 	m_p3.set_y(pos.Y());            
 }
-/*
-void Triangle::rotate(const double angle)     //Rotation anti-clockwise of a triangle at a given angle
-{ 
+
+void Triangle::rotate(const double angle)     
+{
 	help::rotatePoint(m_p1, angle);
 	help::rotatePoint(m_p2, angle);
 	help::rotatePoint(m_p3, angle);
 } 
-*/
+
 void Triangle::normalized()
 {       
 	set_p1(0, 0);

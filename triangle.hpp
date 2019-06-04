@@ -11,11 +11,6 @@
 
 class Triangle
 {
-private:
-    Point m_p1; // Bottom_Left
-    Point m_p2; // Bottom_Right
-    Point m_p3; // Top 
-
 public:             
     // Points should be entered anti-clockwise
     Triangle(const Point &bottomLeft = Point(0, 0), const Point &bottomRight = Point(4, 0), const Point &top = Point(0, 3) ) 
@@ -64,10 +59,16 @@ public:
     void move_Top(const Point &pos);            //Moves the Triangle, leaving the top corner at the given position.
                                                 //The Triangle's size is unchanged   
     
-//    void rotate(const double angle);    //Rotation anti-clockwise of a triangle at a given angle 
+    void rotate(const double angle);  //Rotation triangle at a given angle in degre 
     
     void normalized();
     bool isValid() const ;   
+
+private:
+    Point m_p1; // Bottom_Left
+    Point m_p2; // Bottom_Right
+    Point m_p3; // Top 
+
  };
 
 

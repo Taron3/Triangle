@@ -1,8 +1,6 @@
 
-
 #ifndef HELP_HPP 
 #define HELP_HPP
-
 
 #include <cmath>
 
@@ -16,7 +14,7 @@ double ang_c(const double aa, const double bb, const double cc);  //The cosine t
 double ang_a(const double bb, const double cc, const double aa);
 double ang_b(const double aa, const double cc, const double bb);
 
-// void rotatePoint( Point &point, const double angle); //anti-clockwise rotation of the point
+void rotatePoint(Point &point, const double angle); 
 
 };
 
